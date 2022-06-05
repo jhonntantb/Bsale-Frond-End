@@ -12,12 +12,19 @@ body {
 /* Header Start*/
 .header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 20px 80px;
     background-color: antiquewhite;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .6);
     height: 18vh;
+    width: 100%;
+    margin: 0;
+}
+.header form {
+    display: flex;
+    flex-direction: row;
 }
 .header a img {
     border-radius: 15px;
@@ -29,6 +36,9 @@ body {
     height: 40px;
     border-radius: 5px;
     border: 1px solid orangered;
+    text-align: center;
+    font-size: 17px;
+    color: orangered;
 }
 .header form button {
     width: 60px;
@@ -58,7 +68,7 @@ body {
 .listCategories {
     display: flex;
     flex-direction: column;
-    height: 82vh;
+    height: 60vh;
     background-color:antiquewhite;
     width: 15rem;
     padding-top: 2rem;
@@ -71,6 +81,18 @@ body {
     list-style: none;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.listCategories ul li {
+    font-family: sans-serif;
+    color: black;
+    font-weight: 700;
+    font-size: large;
+}
+
+.listCategories ul li:hover {
+	cursor: pointer;
+	color: orangered;
 }
 
 /* product list  Start*/
