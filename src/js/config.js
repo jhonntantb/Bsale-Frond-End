@@ -1,0 +1,1 @@
+export const apiUrl ='https://bsale-backend-jhonntan.herokuapp.com'
