@@ -4,10 +4,8 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
 body {
-    background-color: aquamarine;
-    max-width: 1280px;
+    max-width: 1200;
 }
 
 /* Header Start*/
@@ -62,6 +60,8 @@ body {
 .body_content {
     display: flex;
     flex-direction: row;
+    max-width: 1280;
+    margin: auto;
 }
 
 /* Categories Start*/
