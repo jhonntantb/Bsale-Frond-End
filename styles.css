@@ -6,28 +6,33 @@
 }
 
 /* Header Start*/
-.header {
+.header div {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 80px;
+    height: 18vh;
+    margin: 0;
+    max-width: 1280px;
+    min-width: 400px;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     background-color: antiquewhite;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .6);
-    height: 18vh;
-    width: 100%;
-    margin: 0;
 }
-.header form {
+.header div form {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
-.header a img {
+.header div a img {
     border-radius: 15px;
     border: 1px solid orangered;
 }
 
-.header form input{
+.header div form input{
     width: 300px;
     height: 40px;
     border-radius: 5px;
@@ -36,7 +41,7 @@
     font-size: 17px;
     color: orangered;
 }
-.header form button {
+.header div form button {
     width: 60px;
     height: 40px;
     font-family: sans-serif;
@@ -47,19 +52,34 @@
     border: 1px solid orangered;
     cursor: pointer;
 }
-.header form button:hover {
+.header div form button:hover {
     color: #ffff;
     background-color: orangered;
 }
 
+
+@media (min-width: 800px) {
+    .header div {
+        min-width: 1000px;
+    }
+}
 /* Body Content Start*/
 
 .body_content {
+    width: 100%;
+    background-color: aquamarine;
+}
+
+.body_content_style {
     display: flex;
     flex-direction: row;
-    max-width: 1280;
+    max-width: 1380px;
+    min-height: 82vh;
     margin: auto;
+    background-color: aquamarine;
+
 }
+
 
 /* Categories Start*/
 
@@ -151,5 +171,37 @@
     text-align: center;
     background-color: rgb(133, 131, 131);
     color: white;
+    bottom: 10px;
 }
 
+@media ( max-width: 500px) {
+    .body_content_style {
+        display: flex;
+        flex-direction: column;
+    }
+    .listCategories {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: fit-content;
+    }
+    .listCategories ul {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+    .listProducts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .header div {
+        display: flex;
+        justify-content: center;
+    }
+    
+}
