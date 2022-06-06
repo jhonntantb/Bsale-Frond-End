@@ -1,6 +1,9 @@
 # Bsale test  Website
 ![bsaleWeb](images/jsBasaleshop.JPG)
 
+# Bsale test  Website Responsive
+![bsaleWebResponsive](images/responsiveBsaleShopWeb.jpg)
+
 ## Demo Website
 
 - 👉 Vercel : [https://bsale-frond-end.vercel.app](https://bsale-frond-end.vercel.app/)
