@@ -1,5 +1,5 @@
 # Bsale test  Website
-![bsaleWeb](image/jsBasaleshop.JPG)
+![bsaleWeb](images/jsBasaleshop.JPG)
 
 ## Demo Website
 
