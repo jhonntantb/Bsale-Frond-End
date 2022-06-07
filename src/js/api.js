@@ -33,11 +33,11 @@ export const getProducts = async (start, size=12) => {
     }
   };
 
-  export const getProductByCategory = async (id) => {
+  export const getProductByCategory = async (id, start,size=10) => {
     try {
-      const response = await fetch(`${apiUrl}/api/products/category?categoryId=${id}`);
+      const response = await fetch(`${apiUrl}/api/products/category?categoryId=${id}&start=${start}&size=${size}`);
       const res = await response.json()
-      return res.results;
+      return res;
     } catch (err) {
       console.log(err);
       return { error: err };
