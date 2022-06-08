@@ -1,6 +1,6 @@
 import { apiUrl } from './config.js';
 
-export const getProducts = async (start, size=12) => {
+export const getProducts = async (_parameter,start, size=10) => {
     try {
       const response = await fetch(`${apiUrl}/api/products?start=${start}&size=${size}`);
       const res =await response.json()
@@ -33,7 +33,7 @@ export const getProducts = async (start, size=12) => {
     }
   };
 
-  export const getProductByCategory = async (id, start,size=10) => {
+  export const getProductByCategory = async (id, start, size=10) => {
     try {
       const response = await fetch(`${apiUrl}/api/products/category?categoryId=${id}&start=${start}&size=${size}`);
       const res = await response.json()
