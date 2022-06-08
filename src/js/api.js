@@ -11,9 +11,9 @@ export const getProducts = async (_parameter,start, size=10) => {
     }
   };
 
-  export const getCategories = async (start, size=10) => {
+  export const getCategories = async () => {
     try {
-      const response = await fetch(`${apiUrl}/api/category?start=${start}&size=${size}`);
+      const response = await fetch(`${apiUrl}/api/category`);
       const responseParser = await response.json()
       return responseParser;
     } catch (err) {
