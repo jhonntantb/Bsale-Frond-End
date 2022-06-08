@@ -1,18 +1,20 @@
-
+ 
 const list_products = document.getElementById("listProducts");
 let current_page = 1;
 let cards = 12;
 
-export const DisplayListProducts  = async( parameter, wrapper, callback) =>{
+export const DisplayListProducts  = async(setpage, parameter, wrapper, callback) =>{
     try {
+        if(setpage&&typeof setpage==="number") current_page = setpage;
         let start = cards*(current_page-1);
         const response = await callback(parameter,start,cards);
         wrapper.innerHTML ="";
         let paginatedItems =response.results;
         for(let i = 0 ; i < paginatedItems.length; i++){
             let product = paginatedItems[i];
+            let url_image = product.url_image || "../../images/imgNotFound.jpg" ;
             let item_element = document.createElement("li");
-            item_element.innerHTML = `<div><h3 class="product_name">${product.name}</h3><img class="product_image" src="${product.url_image? product.url_image: "#"}"/><p>$ ${product.price}</p></div>`;
+            item_element.innerHTML = `<div><h3 class="product_name">${product.name}</h3><img class="product_image" src="${url_image }" /><p>$ ${product.price}</p></div>`;
             wrapper.append(item_element);
         }   
     } catch (error) {
@@ -45,7 +47,7 @@ const PaginationButton = (page, parameter, callback) =>{
 
     button.addEventListener("click", () => {
         current_page = page;
-        DisplayListProducts(parameter, list_products, callback);
+        DisplayListProducts(null, parameter, list_products, callback);
 
         let current_btn = document.querySelector(".pagenumbers button.active");
         current_btn.classList.remove("active");

@@ -10,7 +10,7 @@ const pagination_element = document.getElementById("pagination");
 for(let i of arr){
     const button = document.getElementById(`${i}`);
     button.addEventListener("click", async () => {
-        DisplayListProducts(i, list_products, getProductByCategory);
+        DisplayListProducts(1, i, list_products, getProductByCategory);
         SetupPagination(i, pagination_element, getProductByCategory);  
     })   
 }
