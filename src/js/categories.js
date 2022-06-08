@@ -23,7 +23,7 @@ const SetupCategories = async (wrapper,callback) => {
 
 const LisCategories = (idCategory, name, callback) =>{
     let li = document.createElement("li");
-    li.innerText = name;
+    li.innerText = "🔎 " + name;
     li.addEventListener("click", () => {
         DisplayListProducts(null, idCategory, list_products, callback);
         SetupPagination(idCategory,pagination_element,getProductByCategory)

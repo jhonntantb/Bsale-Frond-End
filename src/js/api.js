@@ -43,3 +43,14 @@ export const getProducts = async (_parameter,start, size=10) => {
       return { error: err };
     }
   };
+
+  export const getProductWithDiscount = async (parameter,start, size=10) => {
+    try {
+      const response = await fetch(`${apiUrl}/api/products/discount?start=${start}&size=${size}`);
+      const res = await response.json()
+      return res;
+    } catch (err) {
+      console.log(err);
+      return { error: err };
+    }
+  };
