@@ -14,6 +14,10 @@ SetupPagination(null, pagination_element,getProducts);
 const logo_element = document.getElementById("logo");
 
 logo_element.addEventListener("click",() => {
+    let current_li = document.querySelector("#categories li.active");
+    if(current_li){
+        current_li.classList.remove("active");
+    }
     DisplayListProducts(1, null, list_products, getProducts);
     SetupPagination(null, pagination_element,getProducts);
 })

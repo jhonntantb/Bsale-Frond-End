@@ -18,7 +18,7 @@ body {
     margin: 0;
     max-width: 1280px;
     min-width: 200px;
-    gap: 2rem;
+    gap: 0.5rem;
 }
 .header {
     display: flex;
@@ -331,6 +331,8 @@ body {
     .header div {
         display: flex;
         justify-content: center;
+        align-content: flex-end;
+        padding-bottom: 2px;
     }
     .header div form input {
         width: 200px;
@@ -338,10 +340,3 @@ body {
     
 }
 
-@media (max-width: 920px) {
-    .header div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-}

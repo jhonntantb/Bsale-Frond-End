@@ -10,15 +10,18 @@ export const DisplayListProducts  = async(setpage, parameter, wrapper, callback)
         const response = await callback(parameter,start,cards);
         wrapper.innerHTML ="";
         let paginatedItems =response.results;
-        for(let i = 0 ; i < paginatedItems.length; i++){
-            let product = paginatedItems[i];
-            let url_image = product.url_image || "./images/imgNotFound.jpg" ;
+        if(paginatedItems.length > 0){
+            for(let i = 0 ; i < paginatedItems.length; i++){
+                let product = paginatedItems[i];
+                let url_image = product.url_image || "./images/imgNotFound.jpg" ;
+                let item_element = document.createElement("li");
+                item_element.innerHTML = `<div><h3 class="productName">${product.name}</h3><img class="productImage" src="${url_image }" /><p>$ ${product.price}</p></div>`;
+                wrapper.append(item_element);
+            }
+        }else {
             let item_element = document.createElement("li");
-            item_element.innerHTML = `<div><h3 class="productName">${product.name}</h3><img class="productImage" src="${url_image }" /><p>$ ${product.price}</p></div>`;
-            wrapper.append(item_element);
-        } 
-        if(current_page===1){
-
+                item_element.innerHTML = `<p>Not results</p>`;
+                wrapper.append(item_element);
         }
     } catch (error) {
         console.log(error)
