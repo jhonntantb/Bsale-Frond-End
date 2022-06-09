@@ -1,4 +1,4 @@
- 
+
 const list_products = document.getElementById("listProducts");
 let current_page = 1;
 let cards = 12;
@@ -12,9 +12,9 @@ export const DisplayListProducts  = async(setpage, parameter, wrapper, callback)
         let paginatedItems =response.results;
         for(let i = 0 ; i < paginatedItems.length; i++){
             let product = paginatedItems[i];
-            let url_image = product.url_image || "../../images/imgNotFound.jpg" ;
+            let url_image = product.url_image || "./images/imgNotFound.jpg" ;
             let item_element = document.createElement("li");
-            item_element.innerHTML = `<div><h3 class="product_name">${product.name}</h3><img class="product_image" src="${url_image }" /><p>$ ${product.price}</p></div>`;
+            item_element.innerHTML = `<div><h3 class="productName">${product.name}</h3><img class="productImage" src="${url_image }" /><p>$ ${product.price}</p></div>`;
             wrapper.append(item_element);
         }   
     } catch (error) {

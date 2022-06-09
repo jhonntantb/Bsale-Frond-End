@@ -4,7 +4,6 @@ import { DisplayListProducts, SetupPagination}  from "./pagination.js"
 const list_products = document.getElementById("listProducts");
 const pagination_element = document.getElementById("pagination")
 const sale_button = document.getElementById("sale");
-console.log(sale_button)
 
 sale_button.addEventListener("click", async(e) =>{
     e.preventDefault();

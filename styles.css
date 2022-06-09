@@ -65,13 +65,13 @@ body {
 
 /* Body Content Start*/
 
-.body_content {
+.bodyContent {
     width: 100%;
     max-width: 100%;
     background-color: aquamarine;
 }
 
-.body_content_style {
+.bodyContentStyle {
     display: flex;
     flex-direction: row;
     max-width: 1380px;
@@ -151,9 +151,6 @@ body {
 
 /* Sale Products*/
 
-.sale_content {
-    background-color: aquamarine;
-}
 .sale {
     width: 100%;
     height: 35px;
@@ -185,7 +182,7 @@ body {
 
 /* product list  Start*/
 
-.product_image {
+.productImage {
     width: 200px;
     max-height: 200px;
 }
@@ -219,16 +216,16 @@ body {
     color: orangered;
     font-weight: 900;
 }
-.product_name {
+.productName {
     font-size: 15px;
     padding: 5px;
     text-align: center;
 }
-.product_section {
+.productSection {
     width: 90%;
 }
 
-.product_section h2 {
+.productSection h2 {
     margin-top: 25px;
     margin-bottom: 25px;
     text-align: center;
@@ -285,7 +282,7 @@ body {
 /* Responsive Start */
 
 @media ( max-width: 500px) {
-    .body_content_style {
+    .bodyContentStyle {
         display: flex;
         flex-direction: column;
         align-items: center;
