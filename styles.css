@@ -5,6 +5,9 @@
     font-family: sans-serif;
 }
 
+body {
+    max-width: 100%;
+}
 /* Header Start*/
 .header div {
     display: flex;
@@ -14,18 +17,20 @@
     height: 18vh;
     margin: 0;
     max-width: 1280px;
-    min-width: 400px;
+    min-width: 200px;
 }
 .header {
     display: flex;
     justify-content: center;
     width: 100%;
+    max-width: 100%;
     background-color: antiquewhite;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .6);
 }
 .header div form {
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
 }
 .header div a img {
     border-radius: 15px;
@@ -67,6 +72,7 @@
 
 .body_content {
     width: 100%;
+    max-width: 100%;
     background-color: aquamarine;
 }
 
@@ -290,7 +296,9 @@
         align-items: center;
     }
     h2 {
-        font-size: 15px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 800;
         margin: 0;
         padding: 0;
     }
@@ -303,24 +311,24 @@
     .filters {
         display: flex;
         align-items: stretch;
-        width: 80%;
+        width: 90%;
         height: fit-content;
-        padding: 0;
         margin-top: 2px;
-        margin-left: 20px;
     }
     .listCategories ul {
         display: flex;
-        gap: 10px;
+        gap: 15px;
         justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
         height: fit-content;
+        padding-top: 25px;
     }
     .listCategories ul li {
-        font-size: 10px;
+        font-size: 15px;
         margin: 0 0 0 0;
-        padding: 0;
+        padding: 5px;
+        border-radius: 5px;
     }
     .listProducts {
         display: flex;
@@ -332,5 +340,16 @@
         display: flex;
         justify-content: center;
     }
+    .header div form input {
+        width: 200px;
+    }
     
+}
+
+@media (max-width: 920px) {
+    .header div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }

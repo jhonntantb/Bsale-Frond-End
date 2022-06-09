@@ -30,6 +30,13 @@ export const SetupPagination = async ( parameter, wrapper, callback) => {
         const totalItems = response.totalItems;
         let page_count = Math.ceil(totalItems/cards);
         for( let i = 1; i <= page_count; i++ ){
+
+            //condicional para button prev
+            // if(i===1){
+            //     let btn_prev = document.createElement("button")
+            //     btn_prev.classList.value = "< Prev"
+            //     wrapper.append(btn_prev)
+            // }
             let btn = PaginationButton(i,parameter, callback);
             wrapper.append(btn);
         }
@@ -56,3 +63,17 @@ const PaginationButton = (page, parameter, callback) =>{
     });
     return button;
 }
+
+// const Btn_prev = () => {
+//     let btn_prev = document.createElement("button")
+//     btn_prev.classList.value = "< Prev"
+
+//     btn_prev.addEventListener("click", () => {
+//         let current_btn = document.querySelector(".pagenumbers button.active");
+//         const value = current_btn.value;
+//         if(value ===1 ){
+//             btn_prev.classList.add("disable")
+//         }
+
+//     })
+// }

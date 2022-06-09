@@ -25,7 +25,7 @@ const LisCategories = (idCategory, name, callback) =>{
     let li = document.createElement("li");
     li.innerText = "🔎 " + name;
     li.addEventListener("click", () => {
-        DisplayListProducts(null, idCategory, list_products, callback);
+        DisplayListProducts(1, idCategory, list_products, callback);
         SetupPagination(idCategory,pagination_element,getProductByCategory)
         let current_li = document.querySelector("#categories li.active");
         if(current_li){
