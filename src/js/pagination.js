@@ -13,7 +13,7 @@ export const DisplayListProducts  = async(setpage, parameter, wrapper, callback)
         if(paginatedItems.length > 0){
             for(let i = 0 ; i < paginatedItems.length; i++){
                 let product = paginatedItems[i];
-                let url_image = product.url_image || "./images/imgNotFound.jpg" ;
+                let url_image = product.url_image || "#" ;
                 let item_element = document.createElement("li");
                 item_element.innerHTML = `<div><h3 class="productName">${product.name}</h3><img class="productImage" src="${url_image }" /><p>$ ${product.price}</p></div>`;
                 wrapper.append(item_element);
